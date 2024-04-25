@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace AnimalKingdom
 {
-    public class Bee, ICanFly
+    public class Bee :Animal, ICanFly
     {
         public Bee()
         {
