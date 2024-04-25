@@ -32,8 +32,8 @@ namespace PlayerManager1 // >>> Change to PlayerManager2 for exercise 4 <<< //
             // Initialize the player list with two players using collection
             // initialization syntax
             playerList = new List<Player>() {
-                new Player("Best player ever", 100),
-                new Player("An even better player", 500)
+                new Player("Goku", 9001),
+                new Player("Vegeta", 1000)
             };
         }
 
@@ -86,9 +86,7 @@ namespace PlayerManager1 // >>> Change to PlayerManager2 for exercise 4 <<< //
         /// </summary>
         private void ShowMenu()
         {
-            // /////////////////// //
-            // COMPLETE ME PLEASE! //
-            // /////////////////// //
+            Console.WriteLine("Welcome choose an option:");
         }
 
         /// <summary>
@@ -96,9 +94,16 @@ namespace PlayerManager1 // >>> Change to PlayerManager2 for exercise 4 <<< //
         /// </summary>
         private void InsertPlayer()
         {
-            // /////////////////// //
-            // COMPLETE ME PLEASE! //
-            // /////////////////// //
+            
+            string name = "";
+            string score = "";
+
+            Console.WriteLine("Insert name: ");
+            name = Console.ReadLine();
+
+            Console.WriteLine("Insert score: ");
+            score = Console.ReadLine();
+            int numScore = int.Parse(score);
         }
 
         /// <summary>
@@ -112,9 +117,11 @@ namespace PlayerManager1 // >>> Change to PlayerManager2 for exercise 4 <<< //
         /// </param>
         private static void ListPlayers(IEnumerable<Player> playersToList)
         {
-            // /////////////////// //
-            // COMPLETE ME PLEASE! //
-            // /////////////////// //
+            
+            foreach (Player player in playersToList)
+            {
+                Console.WriteLine($"{player.Name} {player.Score}");
+            }
         }
 
         /// <summary>
@@ -122,9 +129,18 @@ namespace PlayerManager1 // >>> Change to PlayerManager2 for exercise 4 <<< //
         /// </summary>
         private void ListPlayersWithScoreGreaterThan()
         {
-            // /////////////////// //
-            // COMPLETE ME PLEASE! //
-            // /////////////////// //
+            
+            string score;
+            int minScore = 0;
+
+            Console.WriteLine("Insert minimum score: ");
+            score =  Console.ReadLine();
+            minScore = int.Parse(score);
+
+            foreach (Player player in GetPlayersWithScoreGreaterThan(minScore))
+            {
+                Console.WriteLine($"{player.Name} {player.Score}");
+            }
         }
 
         /// <summary>
@@ -136,9 +152,17 @@ namespace PlayerManager1 // >>> Change to PlayerManager2 for exercise 4 <<< //
         /// </returns>
         private IEnumerable<Player> GetPlayersWithScoreGreaterThan(int minScore)
         {
-            // /////////////////// //
-            // COMPLETE ME PLEASE! //
-            // /////////////////// //
+            List<Player> players = new List<Player>();
+
+            foreach (Player player in playerList)
+            {
+                if (player.Score > minScore)
+                {
+                    players.Add(player);
+                }
+            }
+
+            return players;
         }
     }
 }
