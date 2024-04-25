@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace PlayerManager1 
+namespace PlayerManager3 
 {
     /// <summary>
     /// The player listing program.
@@ -159,10 +159,11 @@ namespace PlayerManager1
                 if (player.Score > minScore)
                 {
                     players.Add(player);
+                    yield return player;
                 }
             }
 
-            return players;
+            yield break;
         }
     }
 }
