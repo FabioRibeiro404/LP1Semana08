@@ -9,7 +9,12 @@ Animal <|-- Bee
 Animal <|-- Cat
 Animal <|-- Dog
 
+IMammal <|.. Bat
+IMammal <|.. Cat
+IMammal <|.. Dog
 
+ICanFly <|.. Bat
+ICanFly <|.. Bee
 
 class IMammal{
 <<interface>>
