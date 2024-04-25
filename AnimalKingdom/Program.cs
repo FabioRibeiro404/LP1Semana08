@@ -6,7 +6,8 @@ namespace AnimalKingdom
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Animal[] animals = new Animal[10];
+            
         }
     }
 }
