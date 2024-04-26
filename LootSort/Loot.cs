@@ -30,20 +30,7 @@ namespace LootSort
             Kind = kind;
             Description = description;
             Value = value;
-        }/*
-        public int CompareTo(Loot type1, Loot type2)
-        {
-            int valueComp = type2.Value.CompareTo(type1.Value);
-
-            int kindComp = type1.Kind.CompareTo(type2.Kind);
-
-            int descriptionComp = type1.Description.CompareTo(type2.Description);
-
-            //if ()
- 
-            return  kindComp + valueComp + descriptionComp;
-        }*/
-
+        }
         
         public int CompareTo(Loot other)
         {
