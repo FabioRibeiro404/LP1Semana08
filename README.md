@@ -16,6 +16,10 @@ IMammal <|.. Dog
 ICanFly <|.. Bat
 ICanFly <|.. Bee
 
+class Animal{
+<<abstract>>
+}
+
 class IMammal{
 <<interface>>
 }
